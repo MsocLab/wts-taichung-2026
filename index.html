@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>IEEE World Technology Summit: Taichung 2026</title>
-  <meta name="description" content="IEEE World Technology Summit: Taichung 2026. From Silicon to Physical AI: The Convergence of Semiconductors, HPC and Data Centres. November 2, 2026 at The Lin Hotel, Taichung, co-located with A-SSCC 2026.">
+  <meta name="description" content="IEEE World Technology Summit: Taichung 2026. From Silicon to Physical AI: The Convergence of Semiconductors, HPC and Data Centres. November 2, 2026 at The Lin Hotel, Taichung, co-located with IEEE A-SSCC 2026.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -19,6 +19,8 @@
   --pad: #df9a2e;
   --line: #c6d1dc;
   --muted: #53627a;
+  --cyan: #dcf3f4;
+  --cyan-line: #b3dde0;
 
   --display: "IBM Plex Sans Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
   --body: "IBM Plex Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
@@ -73,6 +75,15 @@ a { color: var(--trace); }
   color: var(--ink);
   margin-bottom: 1.5rem;
 }
+.hero-theme-line {
+  font-family: var(--display);
+  font-size: clamp(1.3rem, 2.3vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--trace);
+  max-width: 34ch;
+  margin: -0.5rem 0 1.75rem;
+}
 .hero-intro { max-width: 40rem; margin-bottom: 2rem; }
 .hero-intro p { font-size: 1.08rem; line-height: 1.65; color: var(--ink-2); margin-bottom: 0.9em; }
 .hero-intro p:last-child { margin-bottom: 0; }
@@ -112,6 +123,7 @@ a { color: var(--trace); }
 .section { padding: clamp(4rem, 9vw, 7rem) 0; }
 .section-ink { background: var(--ink); color: #e9eef5; }
 .section-silicon { background: var(--silicon); }
+.section-cyan { background: var(--cyan); }
 .section-head { max-width: 46rem; margin-bottom: clamp(2rem, 5vw, 3.5rem); }
 .section h2 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; letter-spacing: -0.01em; margin-bottom: 1rem; }
 .lead { font-size: 1.2rem; line-height: 1.55; color: var(--muted); max-width: 40em; }
@@ -140,23 +152,26 @@ a { color: var(--trace); }
 .theme p { margin: 0; max-width: 30ch; font-size: 1.1rem; }
 
 /* Program */
-.agenda { list-style: none; margin: 0; padding: 0; }
+.agenda { list-style: none; margin: 0; padding: 0; background: #fff; border: 1px solid var(--cyan-line); border-radius: 4px; }
 .agenda > li {
   display: grid; grid-template-columns: 11rem 1fr; gap: 1.5rem;
-  padding: 1.5rem 0 1.5rem 1.25rem;
-  border-bottom: 1px solid #2c4166;
-  border-left: 4px solid transparent;
+  padding: 1.35rem 1.5rem 1.35rem 1.25rem;
+  border-bottom: 1px solid var(--cyan-line);
+  border-left: 5px solid transparent;
 }
+.agenda > li:last-child { border-bottom: 0; }
 .agenda > li.is-key { border-left-color: var(--pad); }
-.agenda > li > time { font-weight: 600; color: #fff; font-variant-numeric: tabular-nums; }
-.agenda h3 { font-size: 1.5rem; font-weight: 600; color: #fff; margin-bottom: 0.4rem; }
-.agenda p { color: #aebbd0; margin: 0; }
-.agenda ul { margin: 0.5rem 0 0; padding-left: 1.1rem; color: #c8d2e2; }
+.agenda > li.is-sywl { border-left-color: var(--trace); }
+.agenda > li > time { font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; display: grid; gap: 0.15rem; align-content: start; }
+.agenda > li > time span { font-weight: 400; color: var(--muted); font-size: 0.9rem; }
+.agenda h3 { font-size: 1.4rem; font-weight: 600; color: var(--ink); margin-bottom: 0.35rem; }
+.agenda p { color: var(--muted); margin: 0; }
+.agenda ul { margin: 0.4rem 0 0; padding-left: 1.1rem; color: var(--ink-2); }
 .agenda ul li { margin: 0.15rem 0; }
-.forum { list-style: none; margin: 0.9rem 0 0; padding: 0; border-left: 1px solid #3a5079; }
-.forum li { display: grid; grid-template-columns: 4.5rem 1fr; gap: 0.75rem; padding: 0.35rem 0 0.35rem 1rem; position: relative; color: #c8d2e2; }
-.forum li::before { content: ""; position: absolute; left: -5px; top: 0.85rem; width: 9px; height: 9px; background: var(--pad); border-radius: 50%; }
-.forum time { color: #fff; font-weight: 600; font-variant-numeric: tabular-nums; }
+.forum { list-style: none; margin: 0.9rem 0 0; padding: 0; border-left: 1px solid var(--cyan-line); }
+.forum li { display: grid; grid-template-columns: 4.5rem 1fr; gap: 0.75rem; padding: 0.3rem 0 0.3rem 1rem; position: relative; color: var(--ink-2); }
+.forum li::before { content: ""; position: absolute; left: -5px; top: 0.8rem; width: 9px; height: 9px; background: var(--pad); border-radius: 50%; }
+.forum time { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
 
 /* Audience */
 .audience-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
@@ -169,17 +184,17 @@ a { color: var(--trace); }
 .audience-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px; }
 
 /* People */
-.people { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
-.person { background: var(--paper); padding: 1.5rem; grid-column: span 2; display: flex; gap: 1.1rem; align-items: center; }
-.person img { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; flex: none; background: var(--silicon); }
-.person-lead { background: var(--ink); color: #fff; }
-.person-lead img { outline: 3px solid var(--pad); outline-offset: 3px; }
-.person:nth-child(4), .person:nth-child(5) { grid-column: span 3; }
-.person .role { font-weight: 600; color: var(--trace); margin-bottom: 0.3rem; font-size: 0.95rem; }
-.person-lead .role { color: var(--pad); }
-.person h3 { font-size: 1.5rem; margin-bottom: 0.35rem; }
-.person p:last-child { margin: 0; color: var(--muted); font-size: 0.95rem; }
-.person-lead p:last-child { color: var(--pad); margin: 0; }
+.people { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem; align-items: start; text-align: center; }
+.person { --ring: var(--ink); display: flex; flex-direction: column; align-items: center; }
+.person .role { font-family: var(--display); font-weight: 700; font-size: 1.3rem; color: var(--ring); margin: 0 0 0.6rem; }
+.person img { width: min(100%, 170px); aspect-ratio: 1; border-radius: 50%; object-fit: cover; border: 5px solid var(--ring); background: #fff; }
+.person h3 { font-size: 1.3rem; margin: 0.9rem 0 0.3rem; }
+.person .title { margin: 0; color: var(--muted); font-size: 0.92rem; line-height: 1.4; max-width: 17rem; }
+.p-bernard { --ring: #2e75b6; margin-top: 90px; }
+.p-yeongher { --ring: #c55a11; }
+.p-chris { --ring: #7030a0; margin-top: 105px; }
+.p-lichun { --ring: #548235; }
+.p-adam { --ring: #404040; margin-top: 105px; }
 .orgs { margin-top: clamp(2.5rem, 5vw, 3.5rem); max-width: 48rem; }
 .orgs h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
 .orgs p { color: var(--muted); margin: 0; }
@@ -227,18 +242,31 @@ a { color: var(--trace); }
   .hero-wafer { max-width: 380px; margin: 0 auto; }
   .about-photo img, .audience-photo img, .venue-photo img { aspect-ratio: 16 / 10; }
   .pillar { grid-template-columns: 1fr; gap: 0.4rem; }
-  .people { grid-template-columns: 1fr 1fr; }
-  .person, .person:nth-child(4), .person:nth-child(5) { grid-column: span 1; }
-  .person-lead { grid-column: span 2; }
+  .people {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "yeongher yeongher yeongher lichun lichun lichun" "bernard bernard chris chris adam adam";
+    column-gap: 0.75rem; row-gap: 2.25rem;
+  }
+  .p-bernard, .p-chris, .p-adam { margin-top: 0; }
+  .p-yeongher { grid-area: yeongher; }
+  .p-lichun { grid-area: lichun; }
+  .p-chris { grid-area: chris; }
+  .p-bernard { grid-area: bernard; }
+  .p-adam { grid-area: adam; }
+  .person img { width: min(100%, 150px); }
 }
 @media (max-width: 760px) {
   .brand img { height: 38px; }
   .partner-logos img { height: 26px; }
   .themes { grid-template-columns: 1fr; }
-  .agenda > li { grid-template-columns: 1fr; gap: 0.35rem; }
+  .agenda > li { grid-template-columns: 1fr; gap: 0.35rem; padding: 1.2rem 1rem; }
+  .agenda > li > time { display: flex; gap: 0.6rem; align-items: baseline; }
   .hero-facts div, .tiers div { grid-template-columns: 1fr; gap: 0.2rem; }
-  .people { grid-template-columns: 1fr; }
-  .person-lead { grid-column: span 1; }
+  .people { column-gap: 0.4rem; }
+  .person .role { font-size: 0.95rem; margin-bottom: 0.45rem; }
+  .person h3 { font-size: 0.98rem; margin-top: 0.6rem; }
+  .person .title { font-size: 0.78rem; }
+  .person img { width: min(100%, 104px); border-width: 3px; }
 }
 
 @media (max-width: 400px) {
@@ -284,6 +312,7 @@ a { color: var(--trace); }
     <div class="wrap hero-grid">
       <div class="hero-text">
         <h1 class="hero-title">IEEE World Technology Summit: Taichung 2026</h1>
+        <p class="hero-theme-line">From Silicon to Physical AI: The Convergence of Semiconductors, HPC and Data Centres</p>
         <div class="hero-intro">
           <p>The IEEE World Technology Summits (WTS) connect industry with the IEEE to address the needs of organizations across sectors and regions. The primary focus is on Product and Service Engineering, where real value is created by identifying and addressing common pre-competitive technical challenges faced by engineering and management teams.</p>
           <p>Each Summit is shaped by industry leaders, who define the event’s scope, themes, and strategic priorities. The result is a highly relevant, practitioner-driven program centered on real-world challenges, success stories, and actionable insights.</p>
@@ -292,8 +321,7 @@ a { color: var(--trace); }
         <dl class="hero-facts">
           <div><dt>Date</dt><dd>Monday, November 2, 2026</dd></div>
           <div><dt>Venue</dt><dd>The Lin Hotel, Taichung, Taiwan</dd></div>
-          <div><dt>Co-located with</dt><dd>A-SSCC 2026</dd></div>
-          <div><dt>Theme</dt><dd>From Silicon to Physical AI: The Convergence of Semiconductors, HPC and Data Centres</dd></div>
+          <div><dt>Co-located with</dt><dd>IEEE A-SSCC 2026</dd></div>
         </dl>
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScuv8gkFYarsEB5wCTRXINCHpg9xy0jWtiTtCeMPJT8-yflwA/viewform" target="_blank" rel="noopener">Register</a>
@@ -306,15 +334,15 @@ a { color: var(--trace); }
   </section>
 
   <!-- About -->
-  <section id="about" class="section">
+  <section id="about" class="section section-cyan">
     <div class="wrap about-grid">
       <div>
         <h2>Industry-led, results-focused</h2>
-        <p class="lead">WTS moves beyond traditional paper presentations. It is a strategic platform, co-located with A-SSCC 2026, where industry executives, chip designers and academic innovators work on the problems Physical AI puts in front of all of them.</p>
+        <p class="lead">WTS moves beyond traditional paper presentations. It is a strategic platform, co-located with IEEE A-SSCC 2026, where industry executives, chip designers and academic innovators work on the problems Physical AI puts in front of all of them.</p>
         <div class="pillars">
           <article class="pillar">
             <h3>Co-location</h3>
-            <p>Held alongside A-SSCC 2026, bringing industry executives, chip designers and academic innovators under one roof.</p>
+            <p>Held alongside IEEE A-SSCC 2026, bringing industry executives, chip designers and academic innovators under one roof.</p>
           </article>
           <article class="pillar">
             <h3>Pre-competitive collaboration</h3>
@@ -322,7 +350,7 @@ a { color: var(--trace); }
           </article>
           <article class="pillar">
             <h3>International synergy</h3>
-            <p>Partnering with the IEEE Japan Chapter to drive cross-border IC design and hardware–software integration.</p>
+            <p>Partnering with the IEEE Region 10 SYW to drive cross-border IC design and hardware–software integration.</p>
           </article>
         </div>
       </div>
@@ -351,7 +379,7 @@ a { color: var(--trace); }
   </section>
 
   <!-- Program -->
-  <section id="program" class="section section-ink">
+  <section id="program" class="section section-cyan">
     <div class="wrap">
       <div class="section-head">
         <h2>Program</h2>
@@ -360,23 +388,49 @@ a { color: var(--trace); }
 
       <ol class="agenda">
         <li>
+          <time>08:50 – 09:10</time>
+          <div>
+            <h3>Milestone Ceremony</h3>
+            <p>IEEE Milestone Ceremony at The Lin Hotel. IEEE President Jill Gostin attends, then departs for Sun Moon Lake.</p>
+          </div>
+        </li>
+        <li>
           <time>10:30 – 11:00</time>
-          <div><h3>Registration and networking</h3></div>
+          <div><h3>Registration and Networking</h3></div>
         </li>
         <li class="is-key">
           <time>11:00 – 11:30</time>
           <div>
-            <h3>Opening Ceremony</h3>
+            <h3>WTS Opening Ceremony</h3>
             <ul>
-              <li>Remarks by IEEE President Jill Gostin</li>
-              <li>Remarks by Prof. Takako Hashimoto</li>
+              <li>Opening remarks: IEEE President Jill Gostin (10 mins)</li>
+              <li>R10 Director Prof. Takako Hashimoto (10 mins)</li>
+              <li>Miin Wu, Macronix Founder (10 mins)</li>
             </ul>
+          </div>
+        </li>
+        <li class="is-sywl">
+          <time>11:30 – 13:00</time>
+          <div>
+            <h3>SYW (YP &amp; WIE) Interaction</h3>
+            <ul>
+              <li>R10 Young Professionals &amp; Women in Engineering Program</li>
+              <li>Open to Taipei Section, WIE, Young Professionals, Life Members and Students</li>
+            </ul>
+          </div>
+        </li>
+        <li class="is-sywl">
+          <time>13:00 – 14:00</time>
+          <div>
+            <h3>SYWL Networking Lunch</h3>
+            <p>Networking lunch for SYW participants (start time to be confirmed).</p>
           </div>
         </li>
         <li class="is-key">
           <time>14:00 – 17:30</time>
           <div>
             <h3>IEEE WTS Taichung 2026</h3>
+            <p>Keynote, technical sessions and panel with industry experts.</p>
             <ol class="forum">
               <li><time>14:00</time><span>Plenary keynote</span></li>
               <li><time>14:30</time><span>Session 1: AI in Semiconductor</span></li>
@@ -385,6 +439,13 @@ a { color: var(--trace); }
               <li><time>16:45</time><span>General panel with industry experts</span></li>
               <li><time>17:30</time><span>Closing</span></li>
             </ol>
+          </div>
+        </li>
+        <li>
+          <time>17:30 – 18:30</time>
+          <div>
+            <h3>R10 / Local Sections SYWL Networking with Industry</h3>
+            <p>Open to all.</p>
           </div>
         </li>
       </ol>
@@ -421,47 +482,38 @@ a { color: var(--trace); }
   <section id="people" class="section section-silicon">
     <div class="wrap">
       <div class="section-head">
-        <h2>Co-chairs and organizing committee</h2>
+        <h2>General Co-Chairs</h2>
       </div>
       <div class="people">
-        <article class="person person-lead">
-          <img src="data:image/jpeg;base64,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" alt="Portrait of Chris Gwo Giun Lee" loading="lazy">
-          <div>
-            <p class="role">General Chair</p>
-            <h3>Chris Gwo Giun Lee</h3>
-          </div>
-        </article>
-        <article class="person">
+        <article class="person p-bernard">
+          <p class="role">Chair</p>
           <img src="data:image/jpeg;base64,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" alt="Portrait of Bernard Lim" loading="lazy">
-          <div>
-            <p class="role">Chair</p>
-            <h3>Bernard Lim</h3>
-            <p>Chair, IEEE Malaysia Section</p>
-          </div>
+          <h3>Bernard Lim</h3>
+          <p class="title">Chair, IEEE Malaysia Section</p>
         </article>
-        <article class="person">
-          <img src="data:image/jpeg;base64,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" alt="Portrait of Dr. Adam T. Drobot" loading="lazy">
-          <div>
-            <p class="role">Chair</p>
-            <h3>Dr. Adam T. Drobot</h3>
-            <p>Chair, IEEE WTS Focus Working Group</p>
-          </div>
-        </article>
-        <article class="person">
+        <article class="person p-yeongher">
+          <p class="role">Advisor</p>
           <img src="data:image/jpeg;base64,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" alt="Portrait of Yeong-Her Wang" loading="lazy">
-          <div>
-            <p class="role">Advisor</p>
-            <h3>Yeong-Her Wang</h3>
-            <p>Chair, IEEE Tainan Section</p>
-          </div>
+          <h3>Yeong-Her Wang</h3>
+          <p class="title">Chair, IEEE Tainan Section</p>
         </article>
-        <article class="person">
+        <article class="person p-chris">
+          <p class="role">General Chair</p>
+          <img src="data:image/jpeg;base64,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" alt="Portrait of Chris (Gwo Giun) Lee" loading="lazy">
+          <h3>Chris (Gwo Giun) Lee</h3>
+          <p class="title">General Chair, IEEE Region 10 Awards Recognition Committee (ARC)</p>
+        </article>
+        <article class="person p-lichun">
+          <p class="role">Advisor</p>
           <img src="data:image/jpeg;base64,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" alt="Portrait of Li-Chun Wang" loading="lazy">
-          <div>
-            <p class="role">Advisor</p>
-            <h3>Li-Chun Wang</h3>
-            <p>Chair, IEEE Taipei Section</p>
-          </div>
+          <h3>Li-Chun Wang</h3>
+          <p class="title">Chair, IEEE Taipei Section</p>
+        </article>
+        <article class="person p-adam">
+          <p class="role">Chair</p>
+          <img src="data:image/jpeg;base64,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" alt="Portrait of Dr. Adam T. Drobot" loading="lazy">
+          <h3>Dr. Adam T. Drobot</h3>
+          <p class="title">Chair, IEEE WTS Focus Working Group</p>
         </article>
       </div>
 
@@ -480,7 +532,7 @@ a { color: var(--trace); }
       </figure>
       <div>
         <h2>The Lin Hotel, Taichung</h2>
-        <p class="lead">WTS shares the venue with A-SSCC 2026, so attendees can move between both events on the same day.</p>
+        <p class="lead">WTS shares the venue with IEEE A-SSCC 2026, so attendees can move between both events on the same day.</p>
         <p class="venue-date">Monday, November 2, 2026</p>
         <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=The+Lin+Hotel+Taichung" target="_blank" rel="noopener">Open in Google Maps</a>
       </div>
